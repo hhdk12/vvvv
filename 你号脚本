@@ -1,0 +1,620 @@
+local var167, var168, var166, var178, var175;
+local fenv = getfenv()
+local var1 = (table and 9825411)
+local var2 = game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua")
+local tbl3 = {
+    var2,
+}
+local var4 = loadstring(var2)
+local var5, var6, var7, var8, var9 = var4()
+local var10 = UDim2.fromOffset
+local var11 = var10(50, 30)
+local tbl12 = {
+    Enabled = true,
+    Callback = function(p1, p2, p3)
+        print("clicked")
+    end,
+    Anonymous = false,
+}
+local var13 = var5.CreateWindow
+local tbl14 = {
+    Title = "",
+    Image = "rbxassetid://114457723265156",
+}
+local tbl15 = {
+    User = tbl12,
+    KeySystem = {
+        SaveKey = false,
+        Note = "请输入卡密.",
+        Key = {
+            "你号NB",
+            "nh脚本MB",
+            "78789191",
+            "7878",
+        },
+        Thumbnail = tbl14,
+    },
+    Author = "作者:你号",
+    IconThemed = true,
+    Folder = "CloudHub",
+    Title = "你号脚本<font color='#00FF00'>1.4.3</font>  ",
+    Transparent = true,
+    Theme = "Light",
+    IconTransparency = 0.5,
+    Icon = "rbxassetid://4483362748",
+    Size = var11,
+}
+local var16 = var5:CreateWindow(tbl15)
+local var17 = var16.Tag
+local var18 = Color3.fromHex
+local var19 = var18("#30ff6a")
+local tbl20 = {
+    Title = "v1.4",
+    Color = var19,
+}
+local var21 = var16:Tag(tbl20)
+local var22 = Color3.fromHex
+local var23 = var22("#315dff")
+local tbl24 = {
+    Title = "此脚本需要RMB",
+    Color = var23,
+}
+local var25 = var16.Tag
+local var26 = var16:Tag(tbl24)
+local var27 = var16.Tag
+local var28 = Color3.fromHex
+local var29 = var28("#000000")
+local tbl30 = {
+    Title = "持续更新",
+    Color = var29,
+}
+local var31 = var16:Tag(tbl30)
+local var32 = var5.Notify
+local tbl33 = {
+    Icon = "bird",
+    Duration = 5,
+    Title = "nh脚本通知",
+    Content = "你号脚本已成功启动",
+}
+local var34 = var5:Notify(tbl33)
+local var35 = var16.Tab
+local tbl36 = {
+    Locked = false,
+    Title = "你号脚本公告",
+    Icon = "layout-grid",
+}
+local var37 = var16:Tab(tbl36)
+local var38 = var37.Paragraph
+local tbl39 = {
+    Image = "rbxassetid://81583956354615",
+    Title = "欢迎使用你号脚本",
+    ThumbnailSize = 0,
+    ImageSize = 42,
+    Thumbnail = "rbxassetid://103506480252017",
+    Desc = "QQ群主群无 ",
+}
+local var40 = var37:Paragraph(tbl39)
+local var41 = var16.Section
+local tbl42 = {
+    Title = "通用",
+    Opened = true,
+}
+local var43 = var16:Section(tbl42)
+local var44 = var16.Section
+local tbl45 = {
+    Title = "服务器",
+    Opened = true,
+}
+local var46 = var16:Section(tbl45)
+local var47 = var16.Section
+local tbl48 = {
+    Title = "设置",
+    Opened = true,
+}
+local var49 = var16:Section(tbl48)
+local tbl50 = {
+    Utilities = var49,
+    Main = var43,
+    Settings = var46,
+}
+local var51 = tbl50.Main
+local var52 = var43.Tab
+local tbl53 = {
+    Locked = false,
+    Title = "通用",
+    Icon = "layout-grid",
+}
+local var54 = var52(var51, tbl53)
+local var55 = var54.Slider
+local tbl56 = {
+    Min = 50,
+    Default = 50,
+    Max = 200,
+}
+local tbl57 = {
+    Value = tbl56,
+    Increment = 1,
+    Title = "跳跃",
+    Callback = function(p1_3, p2_3, p3_3, p4_3)
+        var166 = p1_3[1]
+        var167 = game.Players
+        var168 = var167.LocalPlayer
+        local var169 = var168.Character
+        local var170 = (var169 and 2269865)
+        if var169 then -- ran, expr id 1, had an 'else' but never ran.
+            if not var169 then -- didnt run, expr id 2
+            else
+                local var171 = game.Players
+            end
+        end
+        local var172 = var167.LocalPlayer
+        local var173 = var168.Character
+        local var174 = var173:FindFirstChildOfClass("Humanoid")
+        var174.JumpPower = var166
+    end,
+}
+local var58 = var54:Slider(tbl57)
+local tbl59 = {
+    Min = 16,
+    Default = 16,
+    Max = 400,
+}
+local var60 = var54.Slider
+local tbl61 = {
+    Value = tbl59,
+    Increment = 1,
+    Title = "移速",
+    Callback = function(p1_4, p2_4)
+        var175 = p1_4[1]
+        local var176 = game.Players
+        local var177 = var167.LocalPlayer
+        var178 = var168.Character
+        local var179 = (var178 and 10047493)
+        if not var178 then -- didnt run, expr id 3
+        else
+            if var178 then -- ran, expr id 4, had an 'else' but never ran.
+                local var180 = game.Players
+            end
+        end
+        local var181 = var167.LocalPlayer
+        local var182 = var168.Character
+        local var183 = var182:FindFirstChildOfClass("Humanoid")
+        var183.WalkSpeed = var175
+    end,
+}
+local var62 = var54:Slider(tbl61)
+local var63 = var54.Slider
+local tbl64 = {
+    Min = 0.1,
+    Default = 196.2,
+    Max = 500,
+}
+local tbl65 = {
+    Value = tbl64,
+    Callback = function(p1_5, p2_5, p3_5, p4_5, p5_5, p6_5)
+        local var184 = p1_5[1]
+        local var185 = game.Workspace
+        workspace.Gravity = var184
+    end,
+    Title = "重力",
+    Step = 0.1,
+}
+local var66 = var54:Slider(tbl65)
+local var67 = var54.Button
+local tbl68 = {
+    Locked = false,
+    Callback = function(p1_6, p2_6, p3_6, p4_6)
+        local var186 = game:HttpGet("https://raw.githubusercontent.com/mciklw/mciklwscript/refs/heads/main/flyvthree")
+        local tbl187_2 = {
+            var186,
+        }
+        local var188 = loadstring(var186)
+        local var189, var190, var191, var192, var193 = var188()
+    end,
+    Title = "飞行v3",
+    Desc = "",
+}
+local var69 = var54:Button(tbl68)
+local var70 = var54.Button
+local tbl71 = {
+    Locked = false,
+    Callback = function()
+        local var194 = game:HttpGet("https://raw.githubusercontent.com/fcsdsss/games/refs/heads/main/Silent%20aim/1.1")
+        local tbl195_2 = {
+            var194,
+        }
+        local var196 = loadstring(var194)
+        local var197, var198, var199, var200, var201 = var196()
+    end,
+    Title = "子弹追踪",
+    Desc = "",
+}
+local var72 = var54:Button(tbl71)
+local var73 = var54.Button
+local tbl74 = {
+    Locked = false,
+    Callback = function(p1_8, p2_8)
+        local var202 = game:HttpGet("https://raw.githubusercontent.com/Yungengxin/roblox/main/yinshen")
+        local tbl203_2 = {
+            var202,
+        }
+        local var204 = loadstring(var202)
+        local var205, var206, var207, var208, var209 = var204()
+    end,
+    Title = "隐身 [别人看得见]",
+    Desc = "",
+}
+local var75 = var54:Button(tbl74)
+local var76 = var54.Button
+local tbl77 = {
+    Locked = false,
+    Callback = function(p1_9, p2_9, p3_9, p4_9, p5_9)
+        local var210 = game:HttpGet("https://pastefy.app/wa3v2Vgm/raw")
+        local tbl211_2 = {
+            var210,
+        }
+        local var212 = loadstring(var210)
+        local var213, var214, var215, var216, var217 = var212()
+    end,
+    Title = "撸管r6",
+    Desc = "",
+}
+local var78 = var54:Button(tbl77)
+local tbl79 = {
+    Locked = false,
+    Callback = function(p1_10, p2_10, p3_10)
+        local var218 = game:HttpGet("https://pastefy.app/YZoglOyJ/raw")
+        local tbl219_2 = {
+            var218,
+        }
+        local var220 = loadstring(var218)
+        local var221, var222, var223, var224, var225 = var220()
+    end,
+    Title = "撸管r15",
+    Desc = "",
+}
+local var80 = var54.Button
+local var81 = var54:Button(tbl79)
+local var82 = var16.SelectTab
+local var83 = var16:SelectTab(2)
+local var84 = var46.Tab
+local tbl85 = {
+    Locked = false,
+    Title = "被遗弃",
+    Icon = "layout-grid",
+}
+local var86 = var46:Tab(tbl85)
+local var87 = var86.Button
+local tbl88 = {
+    Locked = false,
+    Callback = function(p1_11, p2_11, p3_11)
+        local var226 = game:HttpGet("https://github.com/devslopo/DVES/raw/main/XK%20Hub")
+        local tbl227_2 = {
+            var226,
+        }
+        local var228 = loadstring(var226)
+        local var229, var230, var231, var232, var233 = var228()
+    end,
+    Title = "XK",
+    Desc = "无卡密中文",
+}
+local var89 = var86:Button(tbl88)
+local var90 = var86.Button
+local tbl91 = {
+    Locked = false,
+    Callback = function(p1_12, p2_12, p3_12, p4_12, p5_12)
+        local var234 = game:HttpGet("https://github.com/devslopo/DVES/raw/main/XK%20Hub")
+        local tbl235_2 = {
+            var226,
+        }
+        local var236 = loadstring(var226)
+        local var237, var238, var239, var240, var241 = var236()
+    end,
+    Title = "不知道",
+    Desc = "无卡密英文",
+}
+local var92 = var86:Button(tbl91)
+local var93 = var16.SelectTab
+local var94 = var16:SelectTab(2)
+local var95 = var46.Tab
+local tbl96 = {
+    Locked = false,
+    Title = "最强战场",
+    Icon = "layout-grid",
+}
+local var97 = var46:Tab(tbl96)
+local var98 = var97.Button
+local tbl99 = {
+    Locked = false,
+    Callback = function(p1_13, p2_13, p3_13)
+        local var242 = game:HttpGet("https://raw.githubusercontent.com/Cyborg883/GoldenPakiFusion/refs/heads/main/Script")
+        local tbl243_2 = {
+            var242,
+        }
+        local var244 = loadstring(var242)
+        local var245, var246, var247, var248, var249 = var244()
+    end,
+    Title = "金身",
+    Desc = "就是一个动作",
+}
+local var100 = var97:Button(tbl99)
+local var101 = var97.Button
+local tbl102 = {
+    Locked = false,
+    Callback = function(p1_14, p2_14, p3_14, p4_14, p5_14)
+        local var250 = game:HttpGet("https://pastefy.app/UY1oh6PG/raw")
+        local tbl251_2 = {
+            var250,
+        }
+        local var252 = loadstring(var250)
+        local var253, var254, var255, var256, var257 = var252()
+    end,
+    Title = "各种自动技能",
+    Desc = "英文",
+}
+local var103 = var97:Button(tbl102)
+local var104 = var97.Button
+local tbl105 = {
+    Locked = false,
+    Callback = function(p1_15, p2_15, p3_15, p4_15)
+        local tbl258_2 = {
+            enabled = false,
+            dontchangeskincolor = false,
+        }
+        local tbl259_2 = {
+            ult_forcewalkspeed = true,
+            tp_duration = 0.15,
+            ult_walkspeed = 64,
+            morph = tbl258_2,
+        }
+        local tbl259_2 = tbl259_2
+        getgenv().settings = tbl259_2
+        local var260 = game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/ATrainSounds/refs/heads/main/ATrain.lua")
+        local tbl261_2 = {
+            var260,
+        }
+        local var262 = loadstring(var260)
+        local var263, var264, var265, var266, var267 = var262()
+    end,
+    Title = "火车头",
+    Desc = "",
+}
+local var106 = var97:Button(tbl105)
+local var107 = var16.SelectTab
+local var108 = var16:SelectTab(2)
+local var109 = var43.Tab
+local tbl110 = {
+    Locked = false,
+    Title = "各大脚本中心",
+    Icon = "layout-grid",
+}
+local var111 = var43:Tab(tbl110)
+local var112 = var111.Button
+local tbl113 = {
+    Locked = false,
+    Callback = function(p1_16, p2_16)
+        fenv.KG_SCRIPT = "张硕制作"
+        local var268 = game:HttpGet("https://github.com/ZS-NB/KG/raw/main/Zhang-Shuo.lua")
+        local tbl269_2 = {
+            var268,
+        }
+        local var270 = loadstring(var268)
+        local var271, var272, var273, var274, var275 = var270()
+    end,
+    Title = "KG脚本",
+    Desc = "",
+}
+local var114 = var111:Button(tbl113)
+local var115 = var111.Button
+local tbl116 = {
+    Locked = false,
+    Callback = function(p1_17, p2_17, p3_17, p4_17, p5_17)
+        local var276 = game:HttpGet("https://raw.githubusercontent.com/smalldesikon/wocaonima/main/sikon.txt")
+        local tbl277_2 = {
+            var276,
+        }
+        local var278 = loadstring(var276)
+        local var279, var280, var281, var282, var283 = var278()
+    end,
+    Title = "混脚本",
+    Desc = "",
+}
+local var117 = var111:Button(tbl116)
+local var118 = var111.Button
+local tbl119 = {
+    Locked = false,
+    Callback = function(p1_18, p2_18)
+        local var284 = loadstring("loadstring(game:HttpGet(\"https://raw.githubusercontent.com/xianing151/SNHUB/main/SNhub.lua\"))()")
+        local var285 = var284()
+        local var286 = game:HttpGet("https://raw.githubusercontent.com/xianing151/SNHUB/main/SNhub.lua")
+        local var287 = loadstring(var286)
+        local var288, var289, var290, var291, var292 = var287()
+    end,
+    Title = "SN脚本中心",
+    Desc = "",
+}
+local var120 = var111:Button(tbl119)
+local var121 = var111.Button
+local tbl122 = {
+    Locked = false,
+    Callback = function(p1_19, p2_19)
+        local var293 = game:HttpGet("https://raw.githubusercontent.com/xiaokong6/x1/refs/heads/main/黄某脚本加载器")
+        local tbl294_2 = {
+            var293,
+        }
+        local var295 = loadstring(var293)
+        local var296, var297, var298, var299, var300 = var295()
+    end,
+    Title = "某黄脚本",
+    Desc = "",
+}
+local var123 = var111:Button(tbl122)
+local var124 = var111.Button
+local tbl125 = {
+    Locked = false,
+    Callback = function(p1_20, p2_20, p3_20, p4_20)
+        local var301 = game:HttpGet("https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/oww")
+        local tbl302_2 = {
+            var301,
+        }
+        local var303 = loadstring(var301)
+        local var304, var305, var306, var307, var308 = var303()
+    end,
+    Title = "安脚本中心",
+    Desc = "",
+}
+local var126 = var111:Button(tbl125)
+local var127 = var111.Button
+local tbl128 = {
+    Locked = false,
+    Callback = function(p1_21, p2_21, p3_21, p4_21, p5_21)
+        local var309 = loadstring("loadstring(game:HttpGet(\"https://raw.githubusercontent.com/ChinaQY/-/main/%E6%83%85%E4%BA%91\"))()")
+        local var310 = var309()
+        local var311 = game:HttpGet("https://raw.githubusercontent.com/ChinaQY/-/main/%E6%83%85%E4%BA%91")
+        local var312 = loadstring(var311)
+        local var313, var314, var315, var316, var317 = var312()
+    end,
+    Title = "不知道脚本中心",
+    Desc = "",
+}
+local var129 = var111:Button(tbl128)
+local var130 = var16.SelectTab
+local var131 = var16:SelectTab(2)
+local var132 = var43.Tab
+local tbl133 = {
+    Locked = false,
+    Title = "客户端",
+    Icon = "layout-grid",
+}
+local var134 = var43:Tab(tbl133)
+local var135 = var134.Button
+local tbl136 = {
+    Locked = false,
+    Callback = function(p1_22, p2_22)
+        local var318 = game:HttpGet("https://rawscripts.net/raw/Universal-Script-John-doe-script-by-g00byd0lan-10381")
+        local tbl319_2 = {
+            var318,
+        }
+        local var320 = loadstring(var318)
+        local var321, var322, var323, var324, var325 = var320()
+    end,
+    Title = "不知道",
+    Desc = "",
+}
+local var137 = var134:Button(tbl136)
+local var138 = var134.Button
+local tbl139 = {
+    Locked = false,
+    Callback = function()
+        local var326 = game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ban-hammer-v0-47112")
+        local tbl327_2 = {
+            var326,
+        }
+        local var328 = loadstring(var326)
+        local var329, var330, var331, var332, var333 = var328()
+    end,
+    Title = "封禁锤",
+    Desc = "",
+}
+local var140 = var134:Button(tbl139)
+local var141 = var16.SelectTab
+local var142 = var16:SelectTab(2)
+local var143 = var46.Tab
+local tbl144 = {
+    Locked = false,
+    Title = "自然灾害",
+    Icon = "layout-grid",
+}
+local var145 = var46:Tab(tbl144)
+local var146 = var145.Button
+local tbl147 = {
+    Locked = false,
+    Callback = function(p1_24)
+        local var334 = game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/V1.lua.txt")
+        local tbl335_2 = {
+            var334,
+        }
+        local var336 = loadstring(var334)
+        local var337, var338, var339, var340, var341 = var336()
+    end,
+    Title = "v1",
+    Desc = "",
+}
+local var148 = var145:Button(tbl147)
+local var149 = var145.Button
+local tbl150 = {
+    Locked = false,
+    Callback = function(p1_25, p2_25, p3_25, p4_25, p5_25)
+        local var342 = game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E7%A3%81%E9%93%81%E9%BB%91%E6%B4%9EV2.txt")
+        local tbl343_2 = {
+            var342,
+        }
+        local var344 = loadstring(var342)
+        local var345, var346, var347, var348, var349 = var344()
+    end,
+    Title = "v2",
+    Desc = "",
+}
+local var151 = var145:Button(tbl150)
+local var152 = var145.Button
+local tbl153 = {
+    Locked = false,
+    Callback = function(p1_26, p2_26)
+        local var350 = game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/V3.txt")
+        local tbl351_2 = {
+            var350,
+        }
+        local var352 = loadstring(var350)
+        local var353, var354, var355, var356, var357 = var352()
+    end,
+    Title = "v3",
+    Desc = "",
+}
+local var154 = var145:Button(tbl153)
+local var155 = var145.Button
+local tbl156 = {
+    Locked = false,
+    Callback = function(p1_27, p2_27, p3_27, p4_27)
+        local var358 = game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/V4.txt")
+        local tbl359_2 = {
+            var358,
+        }
+        local var360 = loadstring(var358)
+        local var361, var362, var363, var364, var365 = var360()
+    end,
+    Title = "v4",
+    Desc = "",
+}
+local var157 = var145:Button(tbl156)
+local var158 = var145.Button
+local tbl159 = {
+    Locked = false,
+    Callback = function()
+        local var366 = game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/V5.txt")
+        local tbl367_2 = {
+            var366,
+        }
+        local var368 = loadstring(var366)
+        local var369, var370, var371, var372, var373 = var368()
+    end,
+    Title = "v5",
+    Desc = "",
+}
+local var160 = var145:Button(tbl159)
+local var161 = var145.Button
+local tbl162 = {
+    Locked = false,
+    Callback = function(p1_29, p2_29, p3_29, p4_29)
+        local var374 = game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/V6.txt")
+        local tbl375_2 = {
+            var374,
+        }
+        local var376 = loadstring(var374)
+        local var377, var378, var379, var380, var381 = var376()
+    end,
+    Title = "v6",
+    Desc = "",
+}
+local var163 = var145:Button(tbl162)
+local var164 = var16.SelectTab
+local var165 = var16:SelectTab(2)
